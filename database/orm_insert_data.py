@@ -15,6 +15,3 @@ user_db = [
 for user in user_db:
     session.add(User(**user))
     session.commit()
-
-if __name__ == '__main__':
-    pass
