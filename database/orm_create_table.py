@@ -6,7 +6,7 @@ from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 
 db_username = "qytang"
 db_password = "Cisc0123"
-db_dns = "pgm-2zetnw1u261948m7.pg.rds.aliyuncs.com"
+db_dns = "qytangdb.pg.rds.aliyuncs.com"
 db_name = "qytangdb"
 
 engine = create_engine(f'postgresql+psycopg2://{db_username}:{db_password}@{db_dns}/{db_name}')

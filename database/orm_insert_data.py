@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.8
 # -*- coding=utf-8 -*-
 from sqlalchemy.orm import sessionmaker
-from database.orm_create_table import User, engine
+from orm_create_table import User, engine
 
 Session = sessionmaker(bind=engine)
 session = Session()
