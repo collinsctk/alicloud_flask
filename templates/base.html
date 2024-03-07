@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+<!--    <link rel="shortcut icon" href="https://qytangawss3.s3.ap-northeast-2.amazonaws.com/static/images/favicon.ico">-->
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock title %}</title>
+    {% block head %}{% endblock head %}
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/Chart.min.js"></script>
+    <script src="/static/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="/static/js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    {% block js %}{% endblock js %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<!--     <a href="/" class="float-left"><img src="https://qytangawss3.s3.ap-northeast-2.amazonaws.com/static/images/logo_long_new.png" height="50" width=auto></a>-->
+     <a href="/" class="float-left"><img src="/static/images/logo_long_new.png" height="50" width=auto></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          {% if active == '首页' %}
+            <li class="nav-item active">
+          {% else %}
+            <li class="nav-item">
+          {% endif %}
+            <a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a>
+          </li>
+          {% if active == '员工信息' %}
+            <li class="nav-item active">
+          {% else %}
+            <li class="nav-item">
+          {% endif %}
+            <a class="nav-link" href="/staff_info">员工信息</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  {% block body %}
+  {% endblock body %}
+  </body>
+</html>
