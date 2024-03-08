@@ -3,6 +3,7 @@ services:
   qytpg:
     image: postgres:13.7
     container_name: qytpg
+    restart: always
     ports:
       - "5432:5432"
     environment:
