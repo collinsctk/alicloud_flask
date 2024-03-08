@@ -4,9 +4,9 @@
 from sqlalchemy import create_engine, orm
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
 
-db_username = "qytang"
+db_username = "qytangdbuser"
 db_password = "Cisc0123"
-db_dns = "qytangdb.pg.rds.aliyuncs.com"
+db_dns = "127.0.0.1"
 db_name = "qytangdb"
 
 engine = create_engine(f'postgresql+psycopg2://{db_username}:{db_password}@{db_dns}/{db_name}')
