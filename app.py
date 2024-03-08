@@ -18,10 +18,14 @@ app.debug = True
 def index():
     instance_id = requests.get("http://100.100.100.200/latest/meta-data/instance-id").text
     region_id = requests.get("http://100.100.100.200/latest/meta-data/region-id").text
+    az_id = requests.get("http://100.100.100.200/latest/meta-data/zone-id").text
+    private_ipv4 = requests.get("http://100.100.100.200/latest/meta-data/private-ipv4").text
     return render_template('index.html',
                            devnet_main='乾颐堂AWS测试',
                            instance_id=instance_id,
                            region_id=region_id,
+                           az_id=az_id,
+                           private_ipv4=private_ipv4,
                            active='首页')
 
 
