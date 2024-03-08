@@ -19,7 +19,7 @@ def index():
     # instance_id = requests.get("http://100.100.100.200/latest/meta-data/instance-id").text
     # region_id = requests.get("http://100.100.100.200/latest/meta-data/region-id").text
     return render_template('index.html',
-                           devnet_main='乾颐堂AWS测试',
+                           devnet_main='乾颐堂开源自动化软件测试',
                            # instance_id=instance_id,
                            # region_id=region_id,
                            active='首页')
